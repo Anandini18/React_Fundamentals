@@ -1,4 +1,4 @@
-## ⚡ Difference Between `npm` & `npx`
+## Difference Between `npm` & `npx`
 
 - **npm (Node Package Manager)**  
   Use `npm` to install and manage Node.js packages globally on your system.
@@ -34,6 +34,10 @@ Example:
 
 Stable versions of dependencies get lock here.  
 
+## `manifest.json` File
+- When we open our website in a mobile app, the settings related to that will be in this file.
+- Provides metadata used when our web app is installed on a user's mobile device or desktop.
+
 ---
 
 ## 🛠️ ESLint
@@ -47,8 +51,6 @@ Stable versions of dependencies get lock here.
 - **`npm run build`**  
   Prepares your app for production. Since browsers understand only HTML, CSS, and JavaScript (not React JSX), this command bundles your app into simple files. The build creates a `build` folder which is used for deployment, replacing the `src` folder.
 
----
-
 ## Difference Between `npm run dev` & `npm run start`
 
 - **React app made with `create-react-app`** uses the script `start`.  
@@ -60,14 +62,10 @@ Stable versions of dependencies get lock here.
 
 ---
 
-# manifest.json File
-- When we open our website in a mobile app, the settings related to that will be in this file.
-- Provides metadata used when our web app is installed on a user's mobile device or desktop.
-
-# react-scripts
+## react-scripts
 - This is responsible for injecting the JavaScript in the `index.html` file in create-react-app.
 
-# ReactDOM
+## ReactDOM
 - JavaScript library provided by React, acts as an interface between React and the DOM.
 - ReactDOM helps take our React components and put them onto the webpage.
 - Provides methods that help render React components into the DOM.
@@ -75,7 +73,7 @@ Stable versions of dependencies get lock here.
 ## ReactDOM.createRoot(container)
 - This sets up a place (root) where your React app will live on the webpage.
 
-# Best Practices
+## Best Practices
 - Whenever we make any component, it must start with an uppercase letter.
 - The file name should also be capitalized.
 
