@@ -1,10 +1,14 @@
-import { useState } from "react"
-function App() {
-  const [count, setCount] = useState(0)
+import MyFile from "./MyFile";
 
+function App() {
   return (
-   <h1>Hello React + Vite World!</h1>
-  )
+    <>
+      {/* Must return a <div></div>, so it's now called a fragrment , <></> */}
+      <h1></h1>
+      <MyFile />
+      {/* not allowed <h1></h1>, must return only 1 div */}
+    </>
+  );
 }
 
-export default App
+export default App;
