@@ -62,11 +62,11 @@ Stable versions of dependencies get lock here.
 
 ---
 
-# manifest.json File
+## manifest.json File
 - When we open our website in a mobile app, the settings related to that will be in this file.
 - Provides metadata used when our web app is installed on a user's mobile device or desktop.
 
-# react-scripts
+## react-scripts
 - This is responsible for injecting the JavaScript in the `index.html` file in create-react-app.
 
 ## ReactDOM
