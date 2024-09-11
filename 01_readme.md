@@ -60,14 +60,14 @@ Stable versions of dependencies get lock here.
 
 ---
 
-# manifest.json File
+## manifest.json File
 - When we open our website in a mobile app, the settings related to that will be in this file.
 - Provides metadata used when our web app is installed on a user's mobile device or desktop.
 
-# react-scripts
+## react-scripts
 - This is responsible for injecting the JavaScript in the `index.html` file in create-react-app.
 
-# ReactDOM
+## ReactDOM
 - JavaScript library provided by React, acts as an interface between React and the DOM.
 - ReactDOM helps take our React components and put them onto the webpage.
 - Provides methods that help render React components into the DOM.
@@ -75,10 +75,19 @@ Stable versions of dependencies get lock here.
 ## ReactDOM.createRoot(container)
 - This sets up a place (root) where your React app will live on the webpage.
 
-# Best Practices
+## Best Practices
 - Whenever we make any component, it must start with an uppercase letter.
 - The file name should also be capitalized.
 
 ---
+
+## Bundler & JSX
+- If "<App/>" is a function, then how we are able to use this syntax?
+- It's because of the Bundler!, Bundler helps to translate this syntax to actual dom. 
+- So, in react we write in JSX -> Javascript + HTML
+
+## Evaluated Expression 
+- {username} : This is the final o/p, we can't write Js here!
+
 
 
