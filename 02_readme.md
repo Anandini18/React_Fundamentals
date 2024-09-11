@@ -149,6 +149,4 @@ Imagine you are scrolling through a list and typing at the same time:
   ```js
   const items = items.map(item => <li key={item.id}>{item.name}</li>);
 
-  ---
-
 
