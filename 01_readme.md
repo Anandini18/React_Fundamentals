@@ -84,7 +84,7 @@ Stable versions of dependencies get lock here.
 ---
 
 ## Bundler & JSX
-- If "<App/>" is a function, then how we are able to use this syntax?
+- If "App" is a function, then how we are able to use this syntax?
 - It's because of the Bundler!, Bundler helps to translate this syntax to actual dom. 
 - So, in react we write in JSX -> Javascript + HTML
 
