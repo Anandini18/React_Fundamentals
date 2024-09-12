@@ -1,6 +1,3 @@
-Sure, here are the notes on props in React, written in the simplest form possible:
-
-```markdown
 # Props in React
 
 ## What are Props in React?
@@ -93,12 +90,11 @@ Hello, Alice!
 Hello, Bob!
 ```
 
-## Summary
+## Important Points
 
 - Props help in making components reusable.
 - They allow you to pass data and functions to child components.
 - Props are objects and are read-only.
 - You can set default values for props using `defaultProps` or default values in function arguments.
 
-By understanding and using props, you can create more dynamic and reusable React components!
-```
+---

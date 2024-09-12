@@ -1,4 +1,4 @@
-# React Hooks and useState (Simplified)
+# React Hooks and useState
 
 ## What are Hooks?
 
@@ -149,11 +149,11 @@ Imagine you are scrolling through a list and typing at the same time:
 - Example:
   ```js
   const items = items.map(item => <li key={item.id}>{item.name}</li>);
+  ```
 
   ---
 
-```markdown
-# Counting Updation Interview Question
+# Counter Updation Interview Question
 
 ## Question
 
@@ -221,7 +221,6 @@ React processes these updates one after the other, so the counter gets updated c
 - **Second approach (`setCounter(counter => counter + 1)`):** Each call uses the updated state from the previous call, so the counter correctly increments to 19.
 
 By using the function form of `setCounter`, you ensure that each update uses the most recent value of the state, allowing the counter to increment correctly.
-```
 
 ---
 
