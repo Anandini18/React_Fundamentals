@@ -45,8 +45,10 @@ function App() {
 
       {/* MY CUSTOM CARD  */}
       {/* Passing props (propery) "channel" with value "myCard" */}
+      <div className="flex flex-row gap-4 ">
       <Card username="Pigeon P." someObj = {myObj} someArr = {newArr}/>
       <Card username="P. Patrick" btnText="Visit Me"/>
+      </div>
     </>
   );
 }
