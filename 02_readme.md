@@ -30,15 +30,16 @@ const [counter, setCounter] = useState(0);
 
 
 3. Use it in your component:
+   ```js
 
-return (
-  <div>
-    <p>Counter: {counter}</p>
-    <button onClick={() => setCounter(counter + 1)}>
-      Increase
-    </button>
-  </div>
-);
+      return (
+         <div>
+            <p>Counter: {counter}</p>
+            <button onClick={() => setCounter(counter + 1)}>
+          Increase
+          </button>
+        </div>
+      );
 
 - When the button is clicked, the setCounter function updates the counter, and React re-renders the new value on the screen.
    
@@ -149,6 +150,7 @@ Imagine you are scrolling through a list and typing at the same time:
   ```js
   const items = items.map(item => <li key={item.id}>{item.name}</li>);
 
+<<<<<<< HEAD
   ---
 
   
@@ -226,4 +228,6 @@ By using the function form of `setCounter`, you ensure that each update uses the
 ```
 
 ---
+=======
+>>>>>>> 38db44fdc4ac57fc1203957d21a6e0c7b065fecc
 
