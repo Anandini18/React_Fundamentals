@@ -30,15 +30,16 @@ const [counter, setCounter] = useState(0);
 
 
 3. Use it in your component:
+   ```js
 
-return (
-  <div>
-    <p>Counter: {counter}</p>
-    <button onClick={() => setCounter(counter + 1)}>
-      Increase
-    </button>
-  </div>
-);
+      return (
+         <div>
+            <p>Counter: {counter}</p>
+            <button onClick={() => setCounter(counter + 1)}>
+          Increase
+          </button>
+        </div>
+      );
 
 - When the button is clicked, the setCounter function updates the counter, and React re-renders the new value on the screen.
    
@@ -151,4 +152,76 @@ Imagine you are scrolling through a list and typing at the same time:
 
   ---
 
+```markdown
+# Counting Updation Interview Question
+
+## Question
+
+In React, if you have the following two pieces of code to update a state variable `counter`, why does the first approach not update the state correctly, while the second approach does?
+
+### First Approach:
+```jsx
+setCounter(counter + 1)
+setCounter(counter + 1)
+setCounter(counter + 1)
+setCounter(counter + 1)
+```
+
+### Second Approach:
+```jsx
+setCounter(counter => counter + 1)
+setCounter(counter => counter + 1)
+setCounter(counter => counter + 1)
+setCounter(counter => counter + 1)
+```
+
+## Answer
+
+In React, state updates can be tricky to understand because they don't always happen immediately. Here's a simple explanation of why your two different approaches produce different results.
+
+### First Approach: `setCounter(counter + 1)`
+
+When you write:
+```jsx
+setCounter(counter + 1)
+setCounter(counter + 1)
+setCounter(counter + 1)
+setCounter(counter + 1)
+```
+Each `setCounter(counter + 1)` call is using the current value of `counter` at the time it's called.
+
+1. The first `setCounter(counter + 1)` sees `counter` as 15 (the default value) and schedules an update to 16.
+2. The second `setCounter(counter + 1)` still sees `counter` as 15 (because the update to 16 hasn't been processed yet) and schedules another update to 16.
+3. The third `setCounter(counter + 1)` again sees `counter` as 15 and schedules another update to 16.
+4. The fourth `setCounter(counter + 1)` also sees `counter` as 15 and schedules yet another update to 16.
+
+So, React ends up setting the counter to 16 four times, but since it's the same value, it effectively only updates it once.
+
+### Second Approach: `setCounter(counter => counter + 1)`
+
+When you write:
+```jsx
+setCounter(counter => counter + 1)
+setCounter(counter => counter + 1)
+setCounter(counter => counter + 1)
+setCounter(counter => counter + 1)
+```
+Each `setCounter` call is using a function that takes the current state and returns the new state. This ensures that each update uses the most recent value of `counter`.
+
+1. The first `setCounter(counter => counter + 1)` sees `counter` as 15 and schedules an update to 16.
+2. The second `setCounter(counter => counter + 1)` sees the updated value (16) and schedules an update to 17.
+3. The third `setCounter(counter => counter + 1)` sees the updated value (17) and schedules an update to 18.
+4. The fourth `setCounter(counter => counter + 1)` sees the updated value (18) and schedules an update to 19.
+
+React processes these updates one after the other, so the counter gets updated correctly to 19.
+
+### Summary
+
+- **First approach (`setCounter(counter + 1)`):** Each call uses the same initial state (15), so the counter only ends up being set to 16.
+- **Second approach (`setCounter(counter => counter + 1)`):** Each call uses the updated state from the previous call, so the counter correctly increments to 19.
+
+By using the function form of `setCounter`, you ensure that each update uses the most recent value of the state, allowing the counter to increment correctly.
+```
+
+---
 
