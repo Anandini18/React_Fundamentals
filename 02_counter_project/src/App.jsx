@@ -15,8 +15,23 @@ function App() {
     // This will change the value wherever there's counter variable
     // That's why we have used
     counter+=1;
-    setCounter(counter)
+    setCounter(counter);
     console.log("Clicked ! "+counter);
+
+
+    /**
+     setCounter(counter+1)
+     setCounter(counter+1)
+     setCounter(counter+1)
+     setCounter(counter+1)
+
+     If I do like this in react, then why it's not getting updates as 19 (default value = 15), while when I'm doing this, it's getting updated : 
+
+     setCounter(counter => counter+1)
+     setCounter(counter => counter+1)
+     setCounter(counter => counter+1)
+     setCounter(counter => counter+1)
+     **/
   }
 
   const removeValue = () =>{
