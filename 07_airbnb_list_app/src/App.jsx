@@ -10,17 +10,26 @@ import data from './data'
 function App() {
   // const [count, setCount] = useState(0)
 
-  const cards = data.map((card) => {
+  const cards = data.map((item) => {
     return(
+      // <Card 
+      //   key = {card.id}
+      //   img = {card. coverImg}
+      //   rating = {card.stats.rating}
+      //   reviewCount = {card.stats.reviewCount}
+      //   location = {card.location}
+      //   title = {card.title}
+      //   price = {card.price}
+      //   openSpots = {card.openSpots}
+      // />
+
       <Card 
-        key = {card.id}
-        img = {card.coverImg}
-        rating = {card.stats.rating}
-        reviewCount = {card.stats.reviewCount}
-        location = {card.location}
-        title = {card.title}
-        price = {card.price}
+        key={item.id}                  // 'key' is passed separately, required for uniquely identifying list items in React
+        item={item}                    // The entire 'item' object is passed as a single prop called 'item'
+                                        // Using object spread syntax means you don't need to individually pass each 
+                                        // property (like img, rating, etc.) as separate props
       />
+      
       )
   });
 
